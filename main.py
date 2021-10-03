@@ -68,7 +68,7 @@ async def opensettings(bot, cmd):
             [
                 [
                     InlineKeyboardButton(
-                        f"NOTIFICATION  {'🔔' if ((await db.get_notif(user_id)) is True) else '🔕'}",
+                        f"NOTIFICATION  { if ((await db.get_notif(user_id)) is True) else '}",
                         callback_data="notifon",
                     )
                 ],
@@ -233,4 +233,4 @@ async def callback_handlers(bot: Client, cb: CallbackQuery):
         )
 
 
-Bot.run()
+
